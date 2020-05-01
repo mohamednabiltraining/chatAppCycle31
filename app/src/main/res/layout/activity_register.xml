@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View"/>
+        <variable
+            name="vm"
+            type="com.route.chatappc31.ui.register.RegisterViewModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".ui.register.RegisterActivity">
+        <EditText
+            android:id="@+id/user_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:text="@={vm.userName}"
+            android:hint="user name" />
+        <TextView
+            android:id="@+id/userNameError"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="please enter a valid username"
+            android:visibility="@{vm.userNameError?View.VISIBLE:View.GONE}"
+            android:textColor="#ff0000"
+            />
+
+        <EditText
+            android:id="@+id/email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"
+            android:text="@={vm.email}"
+            android:hint="Email" />
+        <TextView
+            android:id="@+id/emailError"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="please enter a valid email"
+            android:visibility="@{vm.emailError?View.VISIBLE:View.GONE}"
+            android:textColor="#ff0000"
+            />
+        <EditText
+            android:id="@+id/phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="phone"
+            android:text="@={vm.phone}"
+            android:hint="phone" />
+        <TextView
+            android:id="@+id/phoneError"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="please enter a valid phone number"
+            android:visibility="@{vm.phoneError?View.VISIBLE:View.GONE}"
+            android:textColor="#ff0000"
+            />
+
+
+        <EditText
+            android:id="@+id/password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:hint="password"
+            android:text="@={vm.password}"
+            android:inputType="textPassword"
+            app:layout_constraintTop_toBottomOf="@id/userNameError" />
+        <TextView
+            android:id="@+id/passwordError"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="please enter a valid password (at least 6 chars)"
+            android:textColor="#ff0000"
+            android:visibility="@{vm.passwordError?View.VISIBLE:View.GONE}"
+            />
+        <Button
+            android:id="@+id/login_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Register"
+            android:onClick="@{()->vm.register() }" />
+
+    </LinearLayout>
+</layout>

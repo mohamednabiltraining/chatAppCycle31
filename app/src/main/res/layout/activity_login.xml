@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <import type="android.view.View"/>
+        <variable
+            name="welcomeMessage"
+            type="String" />
+        <variable
+            name="vm"
+            type="com.route.chatappc31.ui.login.LoginViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.login.LoginActivity">
+
+
+        <EditText
+            android:id="@+id/user_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:text="@={vm.userName}"
+            android:hint="Email" />
+        <TextView
+            android:id="@+id/userNameError"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="please enter a valid user Email"
+            android:visibility="@{vm.userNameError?View.VISIBLE:View.GONE}"
+            android:textColor="#ff0000"
+            app:layout_constraintTop_toBottomOf="@id/user_name"
+            />
+
+
+        <EditText
+            android:id="@+id/password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:hint="password"
+            android:text="@={vm.password}"
+
+            android:inputType="textPassword"
+            app:layout_constraintTop_toBottomOf="@id/userNameError" />
+        <TextView
+            android:id="@+id/passwordError"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="please enter a valid password"
+            android:textColor="#ff0000"
+            android:visibility="@{vm.passwordError?View.VISIBLE:View.GONE}"
+            app:layout_constraintTop_toBottomOf="@id/password"
+            />
+        <Button
+            android:id="@+id/login_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Login"
+            android:onClick="@{()->vm.Login() }"
+            app:layout_constraintTop_toBottomOf="@id/passwordError" />
+
+        <TextView
+            android:id="@+id/dont_have_account"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:textSize="24sp"
+            android:text="Don't have Account ? "
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintEnd_toStartOf="@id/register"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/login_btn"
+
+            />
+
+        <TextView
+            android:id="@+id/register"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="Register"
+            android:textColor="@color/colorPrimary"
+            android:textSize="24sp"
+            android:onClick="@{()->vm.register()}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/dont_have_account"
+
+            app:layout_constraintTop_toBottomOf="@id/login_btn" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

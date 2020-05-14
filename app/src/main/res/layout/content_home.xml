@@ -14,5 +14,13 @@
         tools:context=".ui.home.HomeActivity"
         tools:showIn="@layout/activity_home">
 
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rooms_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            android:orientation="vertical"
+            />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

@@ -73,7 +73,7 @@ open abstract class BaseActivity<T :ViewDataBinding  , V: BaseViewModel<*>> :App
                     isCancelable:Boolean
                     ){
         val dialogBuilder  = AlertDialog.Builder(this);
-        if (title!=null)
+        if (title!=null&&title!=-1)
             dialogBuilder.setTitle(title);
         dialogBuilder.setMessage(message);
 

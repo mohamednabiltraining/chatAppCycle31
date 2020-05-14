@@ -1,8 +1,8 @@
-package com.route.chatappc31.OnlineDataBase
+package com.route.chatappc31.onlineDataBase
 
 import com.google.android.gms.tasks.OnCompleteListener
 import com.google.firebase.firestore.QuerySnapshot
-import com.route.chatappc31.OnlineDataBase.model.Room
+import com.route.chatappc31.onlineDataBase.model.Room
 
 
 /**

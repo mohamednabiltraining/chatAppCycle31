@@ -1,7 +1,7 @@
-package com.route.chatappc31.OnlineDataBase
+package com.route.chatappc31.onlineDataBase
 
 import com.google.firebase.auth.FirebaseUser
-import com.route.chatappc31.OnlineDataBase.model.User
+import com.route.chatappc31.onlineDataBase.model.User
 
 
 /**

@@ -7,9 +7,9 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.firestore.ktx.toObject
 import com.route.Base.BaseViewModel
-import com.route.chatappc31.OnlineDataBase.DataHolder
-import com.route.chatappc31.OnlineDataBase.UsersDao
-import com.route.chatappc31.OnlineDataBase.model.User
+import com.route.chatappc31.onlineDataBase.DataHolder
+import com.route.chatappc31.onlineDataBase.UsersDao
+import com.route.chatappc31.onlineDataBase.model.User
 
 
 /**

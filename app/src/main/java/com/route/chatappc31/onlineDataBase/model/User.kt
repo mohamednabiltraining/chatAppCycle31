@@ -1,4 +1,4 @@
-package com.route.chatappc31.OnlineDataBase.model
+package com.route.chatappc31.onlineDataBase.model
 
 
 /**

@@ -1,4 +1,4 @@
-package com.route.chatappc31.OnlineDataBase
+package com.route.chatappc31.onlineDataBase
 
 import com.google.firebase.firestore.CollectionReference
 import com.google.firebase.firestore.ktx.firestore
@@ -15,6 +15,7 @@ class DataBase {
     companion object{
         val USERS_REF = "users";
         val ROOMS_REF = "rooms";
+        val MESSAGES = "messages";
         val db = Firebase.firestore
 
         fun getUsers():CollectionReference{
@@ -22,6 +23,9 @@ class DataBase {
         }
         fun getRooms():CollectionReference{
             return db.collection(ROOMS_REF);
+        }
+        fun getMessages():CollectionReference{
+            return db.collection(MESSAGES);
         }
     }
 

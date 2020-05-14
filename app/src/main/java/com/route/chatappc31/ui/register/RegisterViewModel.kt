@@ -4,9 +4,9 @@ import androidx.databinding.ObservableField
 import com.google.android.gms.tasks.OnCompleteListener
 import com.google.firebase.auth.FirebaseAuth
 import com.route.Base.BaseViewModel
-import com.route.chatappc31.OnlineDataBase.DataHolder
-import com.route.chatappc31.OnlineDataBase.UsersDao
-import com.route.chatappc31.OnlineDataBase.model.User
+import com.route.chatappc31.onlineDataBase.DataHolder
+import com.route.chatappc31.onlineDataBase.UsersDao
+import com.route.chatappc31.onlineDataBase.model.User
 
 
 /**

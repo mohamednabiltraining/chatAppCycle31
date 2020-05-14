@@ -1,8 +1,8 @@
-package com.route.chatappc31.OnlineDataBase
+package com.route.chatappc31.onlineDataBase
 
 import com.google.android.gms.tasks.OnCompleteListener
 import com.google.firebase.firestore.DocumentSnapshot
-import com.route.chatappc31.OnlineDataBase.model.User
+import com.route.chatappc31.onlineDataBase.model.User
 
 
 /**
